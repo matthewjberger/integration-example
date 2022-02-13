@@ -1,0 +1,14 @@
+{
+  "root": "apps/myapp-desktop",
+  "sourceRoot": "apps/myapp-desktop/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": ["yarn electron apps/myapp-desktop"]
+      }
+    }
+  },
+  "tags": []
+}
