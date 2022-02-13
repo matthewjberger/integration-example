@@ -21,7 +21,8 @@
         ],
         "styles": ["apps/myapp-web/src/styles.css"],
         "scripts": [],
-        "webpackConfig": "@nrwl/react/plugins/webpack"
+        "webpackConfig": "@nrwl/react/plugins/webpack",
+        "proxy": "http://localhost:5000"
       },
       "configurations": {
         "production": {
@@ -44,7 +45,8 @@
       "executor": "@nrwl/web:dev-server",
       "options": {
         "buildTarget": "myapp-web:build",
-        "hmr": true
+        "hmr": true,
+        "proxyConfig": "apps/myapp-web/proxy.conf.json"
       },
       "configurations": {
         "production": {

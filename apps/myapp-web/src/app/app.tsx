@@ -1,13 +1,20 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.css';
-import NxWelcome from './nx-welcome';
+import { useState, useEffect } from "react";
 
-export function App() {
+function App() {
+  const [currentTime, setCurrentTime] = useState(0);
+
+  useEffect(() => {
+    fetch("/time")
+      .then((res) => res.json())
+      .then((data) => {
+        setCurrentTime(data.time);
+      });
+  }, []);
+
   return (
-    <>
-      <NxWelcome title="myapp-web" />
-      <div />
-    </>
+    <div style={{background: "green", color: "white"}}>
+        <p>The current date is '{new Date(currentTime).toString()}'.</p>
+    </div>
   );
 }
 
