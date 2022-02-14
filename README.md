@@ -21,6 +21,6 @@ pip3 install flask python-dotenv
 # Install the monorepo dependencies
 yarn 
 
-# Start the backend, frontend, and electron shell in parallel:
+# Start the backend, frontend, and electron shell in order:
 yarn start
 ```
